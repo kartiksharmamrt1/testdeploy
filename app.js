@@ -5,7 +5,7 @@ app.use(express.json());
 app.set("view engine", "ejs");
 
 app.get("/", function(req,res){
-	res.render("home");
+	res.render('home');
 });
 
 app.get("/about", function (req,res){
