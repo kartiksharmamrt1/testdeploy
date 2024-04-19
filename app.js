@@ -1,15 +1,13 @@
 var express = require("express");
 var app = express();
 app.use(express.json());
-
 app.set("view engine", "ejs");
+const about = require('./views/about');
 
 app.get("/", function(req,res){
-	res.render('home');
+	res.send('home');
 });
 
-app.get("/about", function (req,res){
-	res.render("about");
-});
+app.use("/about", about);
 
 app.listen(process.env.PORT,process.env.IP);
