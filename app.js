@@ -10,4 +10,6 @@ app.get("/", function(req,res){
 
 app.get("/about", about);
 
-app.listen(process.env.PORT,process.env.IP);
+app.listen(8080, () => {
+    console.log('Server is listenin on PORT :' + PORT);
+})
